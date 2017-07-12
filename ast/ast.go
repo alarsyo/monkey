@@ -34,7 +34,7 @@ type LetStatement struct {
 func (ls *LetStatement) statementNode() {}
 
 // TokenLiteral returns the token of the let statement (LET)
-func (ls *LetStatement) TokenLiteral() (s string) { return ls.Token.Literal }
+func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
 
 // Identifier node of the AST
 type Identifier struct {
