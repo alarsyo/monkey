@@ -46,3 +46,14 @@ func (i *Identifier) expressionNode() {}
 
 //TokenLiteral returns the token of the identifier (IDENT)
 func (i *Identifier) TokenLiteral() string { return i.Token.Literal }
+
+// ReturnStatement node of the AST
+type ReturnStatement struct {
+	Token       token.Token
+	ReturnValue Expression
+}
+
+func (rs *ReturnStatement) statementNode() {}
+
+// TokenLiteral returns the token of the return statement (RETURN)
+func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
