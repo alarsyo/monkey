@@ -1,6 +1,7 @@
 # Monkey Language Interpreter
 
 [![Build Status](https://travis-ci.org/alarsyo/monkey.svg?branch=master)](https://travis-ci.org/alarsyo/monkey)
+[![codecov](https://codecov.io/gh/alarsyo/monkey/branch/master/graph/badge.svg)](https://codecov.io/gh/alarsyo/monkey)
 
 Follow along code of [Writing an Interpreter in Go](https://interpreterbook.com)
 
