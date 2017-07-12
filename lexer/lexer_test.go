@@ -26,6 +26,8 @@ if (5 < 10) {
 
 10 == 10;
 10 != 9;
+
+&&
 `
 	tests := []struct {
 		expectedType    token.TokenType
@@ -104,6 +106,8 @@ if (5 < 10) {
 		{token.NOTEQ, "!="},
 		{token.INT, "9"},
 		{token.SEMICOLON, ";"},
+		{token.ILLEGAL, "&"},
+		{token.ILLEGAL, "&"},
 		{token.EOF, ""},
 	}
 
@@ -120,5 +124,18 @@ if (5 < 10) {
 			t.Fatalf("tests[%d] - literal wrong. expected=%q, got=%q",
 				i, tt.expectedLiteral, tok.Literal)
 		}
+	}
+}
+
+// Checks if peekChar() returns 0 if called at end of file
+func TestPeekChar(t *testing.T) {
+	input := "!"
+	l := New(input)
+	tok := l.NextToken()
+	if tok.Literal != "!" {
+		t.Error("didn't stop at end of file")
+	}
+	if tok.Type != token.BANG {
+		t.Error("didn't stop at end of file")
 	}
 }
