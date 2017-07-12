@@ -6,5 +6,5 @@ Most of this code is Copyright (c) 2016-2017 Thorsten Ball
 
 ## TODO
 
-[] Support floats
-[] Support hex notation, binary notation...
+- [ ] Support floats
+- [ ] Support hex notation, binary notation...
