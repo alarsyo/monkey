@@ -57,3 +57,14 @@ func (rs *ReturnStatement) statementNode() {}
 
 // TokenLiteral returns the token of the return statement (RETURN)
 func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
+
+// ExpressionStatement node of the AST
+type ExpressionStatement struct {
+	Token      token.Token
+	Expression Expression
+}
+
+func (es *ExpressionStatement) statementNode() {}
+
+// TokenLiteral returns the first token of the expression
+func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }
