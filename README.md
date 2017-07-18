@@ -15,3 +15,4 @@ The state of this program is the one reached at the end of the Chapter 2.5 of th
 
 - [ ] Support floats
 - [ ] Support hex notation, binary notation...
+- [ ] Support postfix operators (i++, i--)
